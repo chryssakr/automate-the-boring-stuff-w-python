@@ -7,7 +7,10 @@ def collatz(number):
     return result
 
 user_input = input("Give a number: ")
-user_input = int(user_input)
-sequenced = collatz(user_input)
-while sequenced != 1 :
-    sequenced = collatz(sequenced)
+try:
+    user_input = int(user_input)
+    sequenced = collatz(user_input)
+    while sequenced != 1 :
+        sequenced = collatz(sequenced)
+except ValueError:
+    print("Enter an integer please")
