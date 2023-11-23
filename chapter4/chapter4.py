@@ -43,6 +43,7 @@ for index, item in enumerate(supplies):
     print('Index ' + str(index) + ' in supplies is: ' + item)
 """
 
+"""
 import random
 messages = ['It is certain',
     'It is decidedly so',
@@ -54,3 +55,14 @@ messages = ['It is certain',
     'Outlook not so good',
     'Very doubtful']
 print(messages[random.randint(0, len(messages) - 1)])
+"""
+
+name = 'Zophie'
+print(name[0])
+print(name[-2])
+print(name[0:4])
+print('Zo' in name)
+print('z' in name)
+print('p' not in name)
+for i in name:
+    print('* * * ' + i + ' * * *')
