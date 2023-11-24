@@ -56,7 +56,7 @@ messages = ['It is certain',
     'Very doubtful']
 print(messages[random.randint(0, len(messages) - 1)])
 """
-
+"""
 name = 'Zophie'
 print(name[0])
 print(name[-2])
@@ -66,3 +66,13 @@ print('z' in name)
 print('p' not in name)
 for i in name:
     print('* * * ' + i + ' * * *')
+
+print(id('Howdy'))
+"""
+
+def eggs(some_parameter):
+    some_parameter.append('Hello')
+
+spam = [1, 2, 3]
+eggs(spam)
+print(spam)
