@@ -14,7 +14,6 @@ try:
             if indent == 20:
                 # Change direction:
                 indent_increasing = False
-
         else:
             # Decrease the number of spaces:
             indent = indent - 1
