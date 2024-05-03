@@ -8,7 +8,7 @@ def collatz(number):
 
 user_input = input("Give a number: ")
 try:
-    user_input = int(user_input)
+    int_input = int(user_input)
     sequenced = collatz(user_input)
     while sequenced != 1 :
         sequenced = collatz(sequenced)
