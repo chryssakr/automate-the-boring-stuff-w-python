@@ -66,13 +66,47 @@ print('z' in name)
 print('p' not in name)
 for i in name:
     print('* * * ' + i + ' * * *')
-
-print(id('Howdy'))
 """
 
-def eggs(some_parameter):
-    some_parameter.append('Hello')
+# name = "Zophie a cat"
+# new_name = name[:7] + "the" + name[8:]
+# print(new_name)
 
-spam = [1, 2, 3]
-eggs(spam)
-print(spam)
+# eggs = [1, 2, 3]
+# eggs = [4, 5, 6] # it does not modify(we don't have a new list value), it overwrites an entirely new and different list value
+# del eggs[2]
+# eggs.append(7) # that mutates
+
+# def eggs(some_parameter):
+#     some_parameter.append('Hello')
+
+# spam = [1, 2, 3]
+# eggs(spam)
+# print(spam)
+
+# tuples
+# They use () instead of [] in lists. They are immutable.
+
+# eggs = ("hello", 42, 0.5)
+# eggs[1] = 99 # that would flag a TypeError
+
+# print(type(("hello",))) # when I have a single value, a trailing comma indicates it as a tuple
+# print(type(("hello"))) # this is considered to be a string
+
+# I can convert types with list() and tuple()
+
+# print(tuple(['cat', 'dog', 5]))
+# print(list(('cat', 'dog', 5))) # in this way I have a mutable version of a tuple
+# print(list('hello')) # returns ['h', 'e', 'l', 'l', 'o']
+
+# References
+# print(id('Howdy')) # the numeric memory address where the string is stored
+# bacon = 'Hello'
+# print(id(bacon))
+# bacon += ' world!' # strings are immutable, so this creates a new string
+# print(id(bacon)) # it will have a new memory address
+
+eggs = ['cat', 'dog']
+print(id(eggs))
+eggs.append('moose') # lists are mutable, so this still refers to the same list
+print(id(eggs)) # it will be the same as before
