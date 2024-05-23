@@ -100,6 +100,9 @@ for i in name:
 # print(list('hello')) # returns ['h', 'e', 'l', 'l', 'o']
 
 # References
+# Variables don't store list values, they store references to lists
+# So when I copy and change a list, the initial list will change as well
+# With copy.copy() and copy.deepcopy() I can change the list without impacting the initial oen
 # print(id('Howdy')) # the numeric memory address where the string is stored
 # bacon = 'Hello'
 # print(id(bacon))
@@ -121,4 +124,3 @@ for i in name:
 # cheese[1] = 42 # it does not affect spam
 # print(spam)
 # print(cheese)
-
