@@ -2,7 +2,7 @@ import random
 
 def flip(times: int) -> list[str]:
     flips = []
-    for i in range(times):
+    for _ in range(times):
         if random.randint(0, 1) == 0:
             flips.append("H")
         else:
@@ -19,11 +19,16 @@ def find_streaks(flips: list[str]) -> int:
             if in_row == 6:
                 streaks += 1
             in_row = 0
+    # checking if the last ones add to the streak
+    if in_row == 6:
+        streaks += 1
     return streaks
+# TODO: change number of experiments to 10000 and number or repetitions per exp to 100
 
 def main() -> None:
-    experiments = 10000
-    flips = flip(experiments)
+    number_of_experiments = 10000
+    # TODO: make 6 a variable
+    flips = flip(number_of_experiments)
     streaks = find_streaks(flips)
     print(f"Chance of streak: {streaks/100}")
     
