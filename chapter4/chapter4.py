@@ -106,7 +106,19 @@ for i in name:
 # bacon += ' world!' # strings are immutable, so this creates a new string
 # print(id(bacon)) # it will have a new memory address
 
-eggs = ['cat', 'dog']
-print(id(eggs))
-eggs.append('moose') # lists are mutable, so this still refers to the same list
-print(id(eggs)) # it will be the same as before
+# eggs = ['cat', 'dog']
+# print(id(eggs))
+# eggs.append('moose') # lists are mutable, so this still refers to the same list
+# print(id(eggs)) # it will be the same as before
+
+# # copy module, copy() and deepcopy()
+# # copy.deepcopy: to copy lists that contain lists
+# import copy
+# spam = ["A", "B", "C", "D"]
+# print(id(spam))
+# cheese = copy.copy(spam) # cheese will be a different list with a different id
+# print(id(cheese))
+# cheese[1] = 42 # it does not affect spam
+# print(spam)
+# print(cheese)
+
