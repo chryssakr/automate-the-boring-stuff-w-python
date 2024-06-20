@@ -57,12 +57,16 @@
 #     f"and {str(picnic_items.get("eggs", "no"))} eggs."
 #       )
 
-# setdefault() -> setdefault(key_to_check, default_if_does_not_exist)
-# sets a value in a dict key if it does not have one already
-# works as a way to check if a key exists as well
+# # setdefault() -> setdefault(key_to_check, default_if_does_not_exist)
+# # sets a value in a dict key if it does not have one already
+# # works as a way to check if a key exists as well
 
-spam = {"name": "Pooka", "age": 5}
-print(spam.setdefault("color", "black"))
-print(spam)
-print(spam.setdefault("color", "white"))  # it already has a value, it won't change it
-print(spam)
+# spam = {"name": "Pooka", "age": 5}
+# print(spam.setdefault("color", "black"))
+# print(spam)
+# print(spam.setdefault("color", "white"))  # it already has a value, it won't change it
+# print(spam)
+
+# # Pretty Print pprint()
+# import pprint
+# pprint.pprint()
