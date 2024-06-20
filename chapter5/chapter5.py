@@ -70,3 +70,35 @@
 # # Pretty Print pprint()
 # import pprint
 # pprint.pprint()
+
+# Nested Dictionaries and Lists
+# Lists: useful for ordered series of values
+# Dictionaries: useful for associating keys with values
+
+all_guests = {
+    "Alice": {"apples": 5, "pretzels": 12},
+    "Bob": {"ham sandwiches": 3, "apples": 2},
+    "Carol": {"cups": 3, "apple pies": 1},
+}
+
+
+def total_brought(guests, item):
+    num_brought = 0
+    for k, v in guests.items():
+        num_brought = num_brought + v.get(item, 0)
+    return num_brought
+
+
+def main():
+    print(
+        f"Number of things being brought to the picnic:\n"
+        f" - Apples             {total_brought(all_guests, "apples")}\n"
+        f" - Cups               {total_brought(all_guests, "cups")}\n"
+        f" - Cakes              {total_brought(all_guests, "cakes")}\n"
+        f" - Ham Sandwitches    {total_brought(all_guests, "ham sandwiches")}\n"
+        f" - Apple Pies         {total_brought(all_guests, "apple pies")}\n"
+    )
+
+
+if __name__ == "__main__":
+    main()
