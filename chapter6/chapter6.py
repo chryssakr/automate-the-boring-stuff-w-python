@@ -44,9 +44,53 @@
 # fizz = spam[0:5]
 # print(fizz)
 
-# The in and not in operators with strings
-print("Hello" in "Hello World!")  # True
-print("HELLO" in "Hello, World")  # False
-print("" in "spam")  # True
-print("cats" not in "cats and dogs")  # False
-print(True, True, True != True, True, True)
+# # The in and not in operators with strings
+# print("Hello" in "Hello World!")  # True
+# print("HELLO" in "Hello, World")  # False
+# print("" in "spam")  # True
+# print("cats" not in "cats and dogs")  # False
+# print(True, True, True != True, True, True)
+
+# # Putting strings inside other strings
+# # We have: string concatenation: "string" + str(age)
+# # string interpolation: "string %s" %(age)
+# # and f-strings: f"string {age}"
+# name = "Joe"
+# age = 2
+# print("My name is %s. I am %s years old." % (name, age))
+# print(f"Next year I will be {age + 1}.")
+
+# # The upper(), lower(), isupper(), and islower() Methods
+# # the upper() and lower() methods return uppercase and lowercase
+# # They don't change the string, they return new values
+# spam = "Hello, world!"
+# print(spam.upper())
+# print(spam.lower())
+
+# # isupper() and islower() check the case of a string and return bool
+# spam = "Hello, world!"
+# print(spam.islower())
+# print(spam.isupper())
+
+# # I can chain those methods
+# print("Hello".upper().lower().upper())
+# print("HELLO".lower().islower())
+
+# isX methods
+# They return bool, useful for data validation
+# isalpha(): if it consists only of letters and isn't blank
+# isalnum(): if it consists only of letters, and numbers and isn't blank
+# isdecimal(): if it consists only of numeric characters and isn't blank
+# isspace(): if it consists only of spaces, tabs, and newlines and isn't blank
+# istitle(): if it consists only of capitalised words and isn't blank
+
+while True:
+    age = input("Enter your age:")
+    if age.isdecimal():
+        break
+    print("Non-valide format. Please enter a number for your age.")
+while True:
+    password = input("Select a new password (letters and numbers only):")
+    if password.isalnum():
+        break
+    print("Non-valide format. Passwords can only have letters and numbers.")
