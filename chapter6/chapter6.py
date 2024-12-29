@@ -76,21 +76,23 @@
 # print("Hello".upper().lower().upper())
 # print("HELLO".lower().islower())
 
-# isX methods
-# They return bool, useful for data validation
-# isalpha(): if it consists only of letters and isn't blank
-# isalnum(): if it consists only of letters, and numbers and isn't blank
-# isdecimal(): if it consists only of numeric characters and isn't blank
-# isspace(): if it consists only of spaces, tabs, and newlines and isn't blank
-# istitle(): if it consists only of capitalised words and isn't blank
+# # isX methods
+# # They return bool, useful for data validation
+# # isalpha(): if it consists only of letters and isn't blank
+# # isalnum(): if it consists only of letters, and numbers and isn't blank
+# # isdecimal(): if it consists only of numeric characters and isn't blank
+# # isspace(): if it consists only of spaces, tabs, and newlines and isn't blank
+# # istitle(): if it consists only of capitalised words and isn't blank
 
-while True:
-    age = input("Enter your age:")
-    if age.isdecimal():
-        break
-    print("Non-valide format. Please enter a number for your age.")
-while True:
-    password = input("Select a new password (letters and numbers only):")
-    if password.isalnum():
-        break
-    print("Non-valide format. Passwords can only have letters and numbers.")
+# while True:
+#     age = input("Enter your age:")
+#     if age.isdecimal():
+#         break
+#     print("Non-valide format. Please enter a number for your age.")
+# while True:
+#     password = input("Select a new password (letters and numbers only):")
+#     if password.isalnum():
+#         break
+#     print("Non-valide format. Passwords can only have letters and numbers.")
+
+# The startswith() and endswith() Methods
