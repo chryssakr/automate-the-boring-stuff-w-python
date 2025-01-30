@@ -6,11 +6,12 @@ def collatz(number):
     print(result)
     return result
 
+
 user_input = input("Give a number: ")
 try:
     int_input = int(user_input)
     sequenced = collatz(user_input)
-    while sequenced != 1 :
+    while sequenced != 1:
         sequenced = collatz(sequenced)
 except ValueError:
     print("Enter an integer please")
