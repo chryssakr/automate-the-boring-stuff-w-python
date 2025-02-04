@@ -1,5 +1,6 @@
 import random
 
+
 def flip(times: int) -> list[str]:
     """
     Flips a coin a number of times.
@@ -12,11 +13,12 @@ def flip(times: int) -> list[str]:
     """
     flips = []
     for _ in range(times):
-        if random.randint(0, 1) == 0:
-            flips.append("H")
+        if random.randint(0, 1):
+            flips.append("Τ")
         else:
-            flips.append("T")
+            flips.append("Η")
     return flips
+
 
 def find_streaks(flips: list[str]) -> bool:
     """
@@ -31,7 +33,7 @@ def find_streaks(flips: list[str]) -> bool:
     streaks = 0
     in_row = 0
     streak_num = 6
-    
+
     for i in range(1, len(flips)):
         if flips[i] == flips[i - 1]:
             in_row += 1
@@ -44,18 +46,20 @@ def find_streaks(flips: list[str]) -> bool:
         return True
     return False
 
+
 def main() -> None:
     number_of_experiments = 10000
     containing_streak = 0
     for _ in range(number_of_experiments):
         flip_times = 100
-        flips = flip(flip_times)    
+        flips = flip(flip_times)
         streaks = find_streaks(flips)
         if streaks:
             containing_streak += 1
     chance_of_streak = containing_streak / number_of_experiments * 100
     chance_of_streak = round(chance_of_streak, 4)
     print(f"Chance of streak: {chance_of_streak}%")
-    
+
+
 if __name__ == "__main__":
     main()
