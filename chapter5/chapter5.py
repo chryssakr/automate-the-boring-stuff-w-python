@@ -84,8 +84,8 @@ all_guests = {
 
 def total_brought(guests, item):
     num_brought = 0
-    for k, v in guests.items():
-        num_brought = num_brought + v.get(item, 0)
+    for _, v in guests.items():
+        num_brought += v.get(item, 0)
     return num_brought
 
 

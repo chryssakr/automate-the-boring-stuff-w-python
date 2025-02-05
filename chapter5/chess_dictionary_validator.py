@@ -54,7 +54,7 @@ def main():
         "5h": "bqueen",
         "3e": "wking",
     }
-    is_valid_chess_board(board)
+    print(is_valid_chess_board(board))
 
 
 if __name__ == "__main__":

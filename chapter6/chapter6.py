@@ -96,3 +96,67 @@
 #     print("Non-valide format. Passwords can only have letters and numbers.")
 
 # The startswith() and endswith() Methods
+
+# print(", ".join(["cats", "rats", "bats"]))
+# print(" ".join(["My", "name", "is", "Simon"]))
+# print("My name is Simon".split())
+# print("My name is Simon".split("i"))
+
+# spam = """Dear Alice,
+# How have you been? I am fine.
+# There is a container in the fridge
+# that is labeled "Milk Experiment."
+
+# Please do not drink it.
+# Sincerely,
+# Bob"""
+
+# print(spam.split("\n"))
+
+"""
+isX Methods
+startswith(), endswith() Methods
+join() and split() Methods
+partition() Method
+    returns a tuple of three substrings for the “before,” “separator,” and “after”
+rjust(), ljust(), and center() Methods
+    justify text
+strip(), rstrip(), and lstrip() Methods
+    remove white space
+ord() function to get the code point of a one-character string
+chry() function to get the one-character string from a code point
+"""
+
+# before, sep, after = "Hello, world!".partition(" ")
+# print(before, sep, after)
+# print("Hello".rjust(10))  # right justify Hello in a string of total length: 10
+# print("Hello".rjust(20, "*"))
+# print("Hello".center(20, "="))
+
+# spam = "    Hello, World    "
+# print(spam.rstrip())
+
+# spam = "SpamSpamBaconSpamEggsSpamSpam"
+# print(spam.strip("ampS"))  # the order of the letters doesn't matter
+# print(ord("A"))
+# print(chr(65))
+
+"""
+Copying and Pasting Strings with the pyperclip Module
+sys.argv is a list where:
+    sys.argv[0] → The script name (e.g., "mclip.py")
+    sys.argv[1] → The first argument provided by the user
+    sys.argv[2], sys.argv[3], etc. → Additional arguments (if any)
+"""
+import pyperclip
+
+# pyperclip.copy("Hello, world!")
+# print(pyperclip.paste())
+text = pyperclip.paste()
+lines = text.split("\n")
+for i in range(len(lines)):
+    lines[i] = "*" + lines[i]
+text = "\n".join(lines)
+print(text)
+pyperclip.copy(text)
+print("Your newly formatted text has been copied to the clipboard")
