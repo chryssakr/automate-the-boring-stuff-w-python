@@ -148,7 +148,8 @@ sys.argv is a list where:
     sys.argv[1] → The first argument provided by the user
     sys.argv[2], sys.argv[3], etc. → Additional arguments (if any)
 """
-import pyperclip
+import pyperclip  # type: ignore
+
 
 # pyperclip.copy("Hello, world!")
 # print(pyperclip.paste())
